@@ -1,11 +1,16 @@
+import java.util.Scanner;
 class OneAway{
 	public static void main (final String[] args) {
-        System.out.println("P1.5 :: Simple Program to check if two strings are one character apart");
-        if(args.length!=2){
-            System.err.println( "Incorrect input. Input two Strings to compare.");
-            return;
-        }
-       System.out.println("Result is ::" + isOneAway(args[0], args[1]));
+        System.out.println("P1.5 :: Simple Program to check if two strings are one character apart.");
+        Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter first string::");
+        String s1 = sc.nextLine();
+        System.out.print("Enter second string::");
+        String s2 = sc.nextLine();
+        if(isOneAway(s1, s2))
+            System.out.println("Input strings are zero or one char away ");
+        else
+            System.out.println("Input strings are more than one char away" );
     }
 
     private static boolean isOneAway(final String s1, final String s2) {
